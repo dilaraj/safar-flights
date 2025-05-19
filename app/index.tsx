@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import SplashScreen from "../components/SpalshScreen";
 
 
@@ -17,9 +17,7 @@ export default function Index() {
                 <SplashScreen onFinish={changeAnimationStatus}/>
             ) : (
                 <View style={styles.container}>
-                    <Text>
-                        Home screen
-                    </Text>
+                    
                 </View>
             )}
         </>
@@ -29,7 +27,7 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#FAFAFA',
       alignItems: 'center',
       justifyContent: 'center',
     },
