@@ -1,3 +1,5 @@
+import DestinationCard from "@/components/HomeScreenComponents/DestinationCardComponent";
+import { useFonts } from "expo-font";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import SplashScreen from "../components/SpalshScreen";
@@ -10,6 +12,17 @@ export default function Index() {
     const changeAnimationStatus = (param: boolean) => {
         setAnimationComplete(param);
     };
+
+    // Global Fonts
+    const [fontsLoaded] = useFonts({
+        Jakarta: require('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf'),
+        JakartaMed: require('../assets/fonts/Jakarta-Medium.ttf'),
+        JakartaLight: require('../assets/fonts/Jakarta-Light.ttf'),
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
     
     return (
         <>
@@ -17,7 +30,7 @@ export default function Index() {
                 <SplashScreen onFinish={changeAnimationStatus}/>
             ) : (
                 <View style={styles.container}>
-                    
+                    <DestinationCard />
                 </View>
             )}
         </>
@@ -27,7 +40,7 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#FAFAFA',
+      backgroundColor: '#F1F1F1',
       alignItems: 'center',
       justifyContent: 'center',
     },
