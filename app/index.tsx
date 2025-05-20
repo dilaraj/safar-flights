@@ -1,4 +1,4 @@
-import DestinationCard from "@/components/HomeScreenComponents/DestinationCardComponent";
+import DestinationCardCarousel from "@/components/HomeScreenComponents/DestinationCardCarouselComponent";
 import { useFonts } from "expo-font";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
@@ -30,7 +30,7 @@ export default function Index() {
                 <SplashScreen onFinish={changeAnimationStatus}/>
             ) : (
                 <View style={styles.container}>
-                    <DestinationCard />
+                    <DestinationCardCarousel heading="Popular Destinations"/>
                 </View>
             )}
         </>

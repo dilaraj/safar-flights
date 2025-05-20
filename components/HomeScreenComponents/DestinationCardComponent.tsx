@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         borderRadius: 18,
         padding: 10,
         gap: 15,
+        paddingRight: 20,
     },
     imageContainer: {
         width: 180,
