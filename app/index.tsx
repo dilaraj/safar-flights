@@ -3,6 +3,7 @@ import { useFonts } from "expo-font";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import SplashScreen from "../components/SpalshScreen";
+import ListItem from "@/components/HomeScreenComponents/ListItemComponent";
 
 
 export default function Index() {
@@ -30,7 +31,7 @@ export default function Index() {
                 <SplashScreen onFinish={changeAnimationStatus}/>
             ) : (
                 <View style={styles.container}>
-                    <DestinationCardCarousel heading="Popular Destinations"/>
+                    <ListItem />
                 </View>
             )}
         </>
