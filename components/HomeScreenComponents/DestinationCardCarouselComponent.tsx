@@ -11,7 +11,7 @@ export default function DestinationCardCarousel({ heading }: Props) {
             <View>
                 <Text style={styles.carouselText}>{heading}</Text>
             </View>
-            <View style={{ height: 300}}>
+            <View style={{ height: 350}}>
                 <ScrollView horizontal style={styles.carouselContainer}>
                     <View style={styles.carouselItem}>
                         <DestinationCard />
@@ -35,13 +35,11 @@ const styles = StyleSheet.create({
         fontFamily: 'JakartaMed',
         fontSize: 20,
         color: '#2D3434',
-        paddingBottom: 10,
+        paddingBottom: 7,
         
     },
     carouselContainer: {
         flex: 1,
-        borderColor: 'black',
-        borderWidth: 1,
     },
     carouselItem: {
         flex: 1, 
