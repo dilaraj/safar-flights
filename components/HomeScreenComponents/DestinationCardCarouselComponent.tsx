@@ -2,24 +2,26 @@ import { ScrollView, StyleSheet, View, Text } from "react-native";
 import DestinationCard from "./DestinationCardComponent";
 
 type Props = {
-    heading: string;
+    cardHeading?: string;
 }
 
-export default function DestinationCardCarousel({ heading }: Props) {
+export default function DestinationCardCarousel({ cardHeading }: Props) {
     return (
         <View style={styles.container}>
             <View>
-                <Text style={styles.carouselText}>{heading}</Text>
-            </View>
-            <View style={{ height: 350}}>
-                <ScrollView horizontal style={styles.carouselContainer}>
-                    <View style={styles.carouselItem}>
-                        <DestinationCard />
-                    </View>
-                    <View style={styles.carouselItem}>
-                        <DestinationCard />
-                    </View>
-                </ScrollView>
+                <View>
+                    <Text style={styles.carouselText}>{cardHeading}</Text>
+                </View>
+                <View style={{ height: 350}}>
+                    <ScrollView horizontal style={styles.carouselContainer}>
+                        <View style={styles.carouselItem}>
+                            <DestinationCard />
+                        </View>
+                        <View style={styles.carouselItem}>
+                            <DestinationCard />
+                        </View>
+                    </ScrollView>
+                </View>
             </View>
         </View>
     )

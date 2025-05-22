@@ -1,10 +1,10 @@
 import { Image, ImageSourcePropType, StyleSheet, Text, View } from "react-native";
 
 type Props = {
-    image: ImageSourcePropType;
-    city: string;
-    country: string;
-    rating: number;
+    image?: ImageSourcePropType;
+    city?: string;
+    country?: string;
+    rating?: number;
     listComponent?: boolean;
 }
 
