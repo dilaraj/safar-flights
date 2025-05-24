@@ -1,5 +1,5 @@
-import { Tabs } from "expo-router";
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { Tabs } from "expo-router";
 import { Platform } from 'react-native';
 
 export default function RootLayout() {
@@ -26,7 +26,7 @@ export default function RootLayout() {
             }}
         >
             <Tabs.Screen 
-                name="index" 
+                name="home" 
                 options={{ 
                     title: 'Home',
                     tabBarIcon: ({color, focused}) => (
