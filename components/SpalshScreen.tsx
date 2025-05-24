@@ -1,11 +1,13 @@
+import { useRouter } from 'expo-router';
 import LottieView from 'lottie-react-native';
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface Props {
     onFinish: (param: boolean) => void;
 }
 
 export default function SplashScreen({ onFinish }: Props) {
+
     return (
         <LottieView 
             source={require('../assets/images/lottie-animation.json')}

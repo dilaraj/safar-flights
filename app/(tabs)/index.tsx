@@ -1,9 +1,9 @@
-import DestinationCardCarousel from "@/components/HomeScreenComponents/DestinationCardCarouselComponent";
 import { useFonts } from "expo-font";
 import { useState } from "react";
-import { StyleSheet, View } from "react-native";
-import SplashScreen from "../components/SpalshScreen";
-import ListItem from "@/components/HomeScreenComponents/ListItemComponent";
+import { StyleSheet, View, Text } from "react-native";
+import SplashScreen from "../../components/SpalshScreen";
+import { Link } from "expo-router";
+
 
 
 export default function Index() {
@@ -16,9 +16,8 @@ export default function Index() {
 
     // Global Fonts
     const [fontsLoaded] = useFonts({
-        Jakarta: require('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf'),
-        JakartaMed: require('../assets/fonts/Jakarta-Medium.ttf'),
-        JakartaLight: require('../assets/fonts/Jakarta-Light.ttf'),
+        JakartaMed: require('../../assets/fonts/Jakarta-Medium.ttf'),
+        JakartaLight: require('../../assets/fonts/Jakarta-Light.ttf'),
     });
 
     if (!fontsLoaded) {
@@ -31,7 +30,12 @@ export default function Index() {
                 <SplashScreen onFinish={changeAnimationStatus}/>
             ) : (
                 <View style={styles.container}>
-                    <ListItem />
+                    <Text style={styles.text}>
+                        Home Screen
+                    </Text>
+                    <Link href={'/search'} style={styles.button}>
+                        Go to search screen
+                    </Link>
                 </View>
             )}
         </>
@@ -41,8 +45,16 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#F1F1F1',
+      backgroundColor: '#25292e',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    text: {
+        color: '#fff',
+    },
+    button: {
+        fontSize: 20,
+        textDecorationLine: 'underline',
+        color: '#fff',
     },
   });
